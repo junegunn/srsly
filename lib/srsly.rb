@@ -70,7 +70,7 @@ def SRSLY? *args
     end if error
 
   resps = options.select { |k, v| k.is_a?(Regexp) || k.is_a?(String) || k.nil? }
-  resps = resps.merge(
+  resps = Hash[resps].merge(
     # Default responses if nothing given
     /^y/i => true,
     /^n/i => false) if resps.reject { |k, _| k.nil? }.empty?

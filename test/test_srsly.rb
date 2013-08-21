@@ -5,7 +5,7 @@ require 'minitest/autorun'
 require 'mocha/setup'
 require 'srsly'
 
-class TestSRSLY < MiniTest::Unit::TestCase
+class TestSRSLY < MiniTest::Test
   def setup
     $stdin = STDIN
     $stdout = STDOUT
